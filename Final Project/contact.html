@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/contact.css" rel="stylesheet">
+  <title>JHC</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul class="skip-links">
+            <li><a role="link" href="#navigation">Skip to nav</a></li>
+            <li><a role="link" href="#heroSec">Skip to hero section</a></li>
+            <li><a role="link" href="#infoSec">Skip to contact info</a></li>
+            <li><a role="link" href="#contactSec">Skip to contact form</a></li>
+            <li><a role="link" href="#footerSec">Skip to footer</a></li>
+        </ul>
+        <header>
+            <nav role="navigation" id="navigation">
+                <div class="navBar bleed">
+                    <img class="logo mobile" src="images/logoMobile.svg" alt="mobile jhc logo">
+                    <img class="logo desktop" src="images/logoDesktop.svg" alt="desktop jhc logo">
+                    <ul>
+                        <li><a role="link" href="index.html">Home</a></li>
+                        <li><a role="link" href="about.html">About</a></li>
+                        <li><a role="link" href="products.html">Products</a></li>
+                        <li><a role="link" aria-current="page" href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main role="main">
+            <div role="banner" class="hero" id="heroSec">
+                <div class="tint">
+                    <h1 role="heading" aria-level="1" class="bleed">Book Meeting</h1>
+                    <p class="bleed"></p>
+                    <p><a role="link" href="https://docs.google.com/spreadsheets/d/1-tUizYIA3VPbUGKjQnPL0ZklO_HHroV1vejekWufpJM/edit?usp=sharing">View Timeslots <i class="fa-solid fa-caret-right"></i></a></p>
+                </div>
+            </div>
+            <h2 role="heading" aria-level="2" class="info bleed" id="infoSec">Contact Info</h2>
+            <section itemscope itemtype="https://schema.org/PostalAddress" class="address info bleed">
+                <h3 role="heading" aria-level="3">Address</h3>
+                <p>Downtown</p>
+                <p itemprop="streetAddress">92 Banker-Side Street,</p>
+                <div class="line">
+                    <p itemprop="addressLocality">Ottawa</p>,<p itemprop="addressRegion"> Ontario</p>
+                </div>
+                <p itemprop="postalCode">K1R 4E9</p>
+            </section>
+            <section class="email info bleed">
+                <h3 role="heading" aria-level="3">Email</h3>
+                <p>info@jhc.com</p>
+            </section>
+            <section class="phone info bleed">
+                <h3 role="heading" aria-level="3">Phone</h3>
+                <p>613-555-5555</p>
+            </section>
+            <div class="contact bleed" id="contactSec">
+                <h2 role="heading" aria-level="2">Contact Form</h2>
+                <form role="form" id="contactForm">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Full Name"><br>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" placeholder="email@example.com"><br>
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject"><br>
+                    <label for="yourmessage">Your message:</label>
+                    <textarea id="yourmessage" name="yourmessage" rows="5" placeholder="Your message..."></textarea><br>
+                    <p><a role="link" href="#">Send</a></p>
+                </form>
+            </div>
+            <div class="backTop"><a role="link" href="#navigation" id="btt">Back to top</a></div>
+        </main>
+        <footer role="contentinfo" id="footerSec">
+            <div class="me bleed">
+                <div itemscope itemtype="https://schema.org/Person">
+                    <p itemprop="name">Jack Habboosh</p>
+                    <p itemprop="telephone">Tel. 613-555-5555</p>
+                </div>
+                <div class="elfsight-app-b25398d7-a10a-4cf9-ab70-ce6b838ca5f5 social"></div>
+            </div>
+            <p>Hero banner images from <a role="link" href="https://unsplash.com">Unsplash</a></p>
+            <p>Copyright &copy; Jack Habboosh Creatives 2022</p>
+        </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/6167e29d85.js" crossorigin="anonymous"></script>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+</body>
+</html>

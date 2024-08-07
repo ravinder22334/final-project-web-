@@ -1,0 +1,101 @@
+/* styles h3 */
+h3{
+    padding-bottom: 0.2em;
+    font-weight: bold;
+}
+/* change hero background image */
+.hero{
+    /* work around for hero image not working */
+    background-image: url(https://github.com/habb0016/portfolio/blob/main/images/aboutHero.jpg?raw=true);
+}
+/* centers team text */
+.team{text-align: center;}
+/* styles images in team class */
+.team img{
+    width: 100%;
+    border: 5px solid var(--primary-color);
+    box-sizing: border-box;
+    margin: 0.5em 0;
+}
+/* padding before meet the team */
+h2.team{padding-top: 0.25em;}
+/* adds background colour to sections and divs that need them */
+.mission, .values, .john{background-color: var(--primary-color);}
+/* styles first 3 sections */
+.mission, .vision, .values{
+    text-align: center;
+    padding:1em 2em;
+}
+/* Adds padding to john and phalse's section in meet the team */
+.john, .phalse{padding-top: 1.5em;}
+/* padding bottom only first 3 sections */
+.mission h2, .vision h2, .values h2{padding-bottom: 0.25em;}
+/* styles paragraphs in meet the team */
+.jack p, .john p, .phalse p{padding-bottom: 1.5em;}
+/* Tablet media query (575-768px) */
+@media (min-width: 575px){
+    /* change hero background position */
+    .hero{background-position: 0 25%;}
+    /* reduce size of meet the team and center it */
+    div.team{
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+/* desktop 768-992px*/
+@media (min-width: 768px){
+    /* space between hero and mission */
+    .mission{margin-top: 1em}
+    /* padding for john and phalse's sections */
+    .john, .phalse{padding-top: 0.5em;}
+    /* styles meet the team */
+    .team{
+        /* align all team text left */
+        text-align: left;
+    }
+    /* remove padding for images in team */
+    .team img{margin: 0}
+    /* styles first 3 sections */
+    .mission, .vision, .values{
+        text-align: left;
+        padding: 0.25em 0 0.5em 0.25em;
+        /* using margins to space sections */
+        margin-bottom: 0.5em;
+    }
+    .jackBio, .phalseBio{padding: 0.25em 0 0.75em 0;}
+    /* using grid 4 col 1 row for each team member's biography+picture */
+    .jackBio, .johnBio, .phalseBio {
+        display: grid;
+        /* creates 1 row */
+        grid-template-rows: 1fr;
+        /* creates 4 columns of equal width */
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.25em;
+        margin-bottom: 0.25em;
+    }
+    /* align john's h3 and h4 to the right */
+    .john h3, .john h4{
+        text-align: right;
+        /* counter border around image */
+        margin-right: 5px;
+    }
+    /* makes biography occupy first 3 spaces for john */
+    .johnBio p{
+        /* change order and defines where p will be */
+        order: -1;
+        grid-column: 1/span 3;
+        padding: 0em;
+        /* vertically center p and add 5 px to left */
+        margin: auto 0 auto 5px;
+    }
+    /* makes biography occupy first 3 spaces for john */
+    .johnBio img{grid-column: 4;}
+    /* makes biography p occupy 3 col for Jack and Phalse */
+    .jackBio p, .phalseBio p{
+        grid-column: 2/span 4;
+        padding: 0em;
+        /* vertically center p */
+        margin: auto 0;
+    }
+    
+}

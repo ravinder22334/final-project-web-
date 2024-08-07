@@ -1,0 +1,96 @@
+*{box-sizing: border-box;}
+/* spacing h3 and make it more prominent */
+h3{
+    font-weight: bold;
+    padding-bottom: 0;
+}
+/* allows input to be read easier */
+input{
+    padding:0.3em;
+    color: var(--tertiery-color);
+}
+/* style placeholder */
+::placeholder{color: var(--tertiery-color);}
+/* change hero background image */
+.hero{
+    /* use image as background */
+    /* work around for hero image not working */
+    background-image: url(https://github.com/habb0016/portfolio/blob/main/images/contactsHero.jpg?raw=true);
+}
+/* center first half of the page's text */
+.info{
+    text-align: center;
+    padding-bottom: 0.25em;
+}
+/* spacing between sections */
+.phone{padding-bottom: 1em;}
+/* center h2 and button in contact */
+.contact h2, .contact p{text-align: center;}
+div.line{
+    display: flex;
+    flex-direction: row;
+}
+/* centering contact form */
+#contactForm{
+    display: flex;
+    flex-direction: column;
+    /* horizontally center inputs */
+    align-items: center;
+}
+/* your message styling */
+#yourmessage{color: var(--tertiery-color);}
+/* align labels left */
+#contactForm label{
+    align-self: start;
+    /* 0.75 to match inputs */
+    margin-left: 0.75em;
+    justify-content: flex-start;
+    padding-bottom: 0.25em;
+}
+/* style send button */
+#contactForm a:link,#contactForm a:visited{
+    border: 3px solid var(--primary-color);
+    padding: 0.25em 0.5em;
+    background-color: white;
+    /* color for button that has good contrast */
+    color: var(--background-main);
+    font-weight: bold;
+    text-decoration: none;
+}
+/* send button hover active states */
+#contactForm a:hover, #contactForm a:active{
+    border: 3px solid rgb(39, 83, 126);
+    padding: 0.25em 0.5em;
+    background-color: white;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+/* space after button */
+#contactForm p{margin-bottom: 3em;}
+/* disable resize for message box */
+#yourmessage{resize: none;}
+/* style input fields */
+#name, #email, #subject, #yourmessage{
+    width: 95%;
+    border: 3px solid var(--primary-color);
+}
+/* Tablet media query (575-768px) */
+@media (min-width: 575px){
+    /* resize textfields */
+    #name, #email, #subject, #yourmessage{width: 90%;}
+    /* align label and form fields */
+    #contactForm label{margin-left: 5%;}
+}
+/* desktop media query (768-992px) */
+@media (min-width: 768px){
+    /* align contact info text */
+    .info{text-align: left;}
+    .contact h2{text-align: left;}
+    /* resize textfields */
+    #name, #email, #subject, #yourmessage{width: 100%;}
+    /* aligns content left (send button) */
+    #contactForm{align-items: flex-start;}
+    /* align label and form fields */
+    #contactForm label{margin-left: 0;}
+}

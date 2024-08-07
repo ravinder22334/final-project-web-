@@ -1,0 +1,351 @@
+/* Global settings */
+:root {
+    /* setting custom variables */
+    --primary-color:#007e78;
+    --secondary-color: white;
+    --tertiery-color: #ffffff;
+    --background-main: #3d324b;  
+    /* smooth scrolling (ex back to top button) */
+    scroll-behavior: smooth;
+    /* hides white space to right of page */
+    overflow-x: hidden;
+}
+/* all text white */
+*{color: white;}
+/* styling headings and add google fonts */
+h1{
+    font-family: 'Anton', sans-serif;
+    font-size: 36px;
+    padding: 0.25em 0;
+}
+h2{
+    font-family: 'Karantina', sans-serif;
+    font-size: 35px;
+}
+h3{
+    font-family: 'Inconsolata', monospace;
+    font-size: 22px;
+}
+h4{
+    font-family: 'Inconsolata', monospace;
+    font-size: 19px;
+}
+h5,h6 {font-family: 'Inconsolata', monospace;}
+/* styling placeholder paragraphs anchor tags and labels */
+p,a,::placeholder,label{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 17px;
+}
+/* styling nav */
+nav{
+    background-color: var(--primary-color);
+    padding: 1em 0;    
+}
+/* footer styling */
+footer{
+    background-color: var(--primary-color);
+    padding: 2em 0;
+}
+/* styles skip links */
+.skip-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   }
+   .skip-links a{
+    position: absolute;
+    top: -3em;
+    background-color: white;
+    color:black;
+    padding: .5em 1em;
+    font-weight: bold;
+   }
+   /* display skip link when user is focused on link */
+   .skip-links a:focus{
+       top: 0;
+   }
+/* logo size */
+.logo{width: 35%;}
+/* animates logo using animate keyframe */
+img.logo {
+    /* animation name duration timing function delay and iteration count */
+    animation: animate 8s linear 1s infinite;
+}
+/* hide desktop logo */
+.desktop{display:none;}
+/* use wrapper to center content */
+.wrapper{
+    margin: 0 auto;
+    background-color: var(--background-main);
+}
+/* blue overlay for hero */
+.tint{
+    background-color: rgba(43, 90, 57, 0.8);
+    border: 4px solid var(--background-main);
+}
+/* hero banner styling */
+.hero{
+    /* use image as background */
+    /* work around for hero image not working */
+    background-image: url(https://github.com/habb0016/portfolio/blob/main/images/homeHero.jpg?raw=true);
+    background-size: cover;
+    /* shift background picture on y axis */
+    background-position: 0 80%;
+    text-align: center;
+}
+/* sample text align */
+.samples{text-align: center;}
+/* styles skill sections */
+.skill{
+    text-align: center;
+    background-color: var(--primary-color);
+    margin: 2em 0;
+    padding: 0.5em 0;
+}
+.skill p{padding: 0.5em 1em 0.25em 1em;}
+/* style hero button */
+.hero a{
+    background-color: var(--primary-color);
+    border: 3px solid var(--background-main);
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+}
+/* style hero button */
+.hero a:link, .hero a:visited{
+    color: white;
+    text-decoration: none;
+}
+.hero a:hover, .hero a:active{
+    /* swtiches border and background colour on hover */
+    background-color: var(--background-main);
+    border: 3px solid var(--primary-color);
+    text-decoration: none;
+}
+/* textbutton margin to fix hero section button */
+.hero p:nth-child(3){margin: 2em;}
+/* hero paragraph space */
+.hero p:nth-child(2){padding: 0 1em 2em 1em;}
+/* styles sample gallery images */
+.sample img{
+    width: 100%;
+    border: 5px solid var(--primary-color);
+    box-sizing: border-box;
+}
+/* spacing for text in sample */
+.sample p{padding: 0.5em 0 1em 0;}
+.samples h3{padding: 0.3em 0 0.25em 0;}
+/* styles navigation bar and logo */
+div.navBar {
+    display: flex;
+    flex-direction: row;
+    /* vertically center items */
+    align-items: center;
+    /* distribute logo and nav links with space around */
+    justify-content: space-around;
+}
+/* styles nav links */
+nav a{
+    font-size: 1.6em;
+    text-decoration: none;
+}
+/* style nav links */
+nav a:link, nav a:visited{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover, nav a:active{
+    color: var(--tertiery-color);
+    text-decoration: underline;
+}
+/* centers back to top button */
+.backTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* padding right and bottom 0.5em */
+    padding: 0 0.5em 0.5em 0;
+}
+/* nav link spacing */
+nav ul li{padding: 0.5em 0;}
+/* styles active link in nav ul */
+.active:link, .active:visited{
+    text-decoration: underline;
+    color: var(--tertiery-color);
+}
+.active:hover, .active:active{
+    text-decoration: dashed;
+    color: white;
+}
+/* align text in footer */
+footer p{
+    text-align: center;
+    padding: 0.25em 0;
+}
+footer div{padding-bottom: 1em;}
+/* styles footer link */
+footer a{
+    color: var(--tertiery-color);
+    font-weight: bold;
+}
+footer a:link, footer a:visited{
+    color: var(--tertiery-color);
+    text-decoration: underline;
+}
+footer a:hover, footer a:active{
+    color: white;
+    text-decoration: none;
+}
+/* styles back to top button */
+a#btt{
+    color: var(--tertiery-color);
+}
+a#btt:link, a#btt:visited{
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+}
+a#btt:hover, a#btt:active{
+    color: var(--tertiery-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+/* hide social media links on mobile */
+div.social, footer script{display: none;}
+/* keyframe for animating logo */
+@keyframes animate {
+    0% {opacity: 100%;}
+    50% {
+        /* fade out logo and shrink to 80% current size */
+        opacity: 25%;
+        /* scale transform to 80% */
+        transform: scale(0.8);
+    }
+    /* return to normal by end */
+    100% {opacity: 100%;}
+  }
+/* Tablet media query (575-768px) */
+@media (min-width: 575px){
+    /* resize logo  */
+    .logo{width: 25%;}
+    /* remove margin from each skill section to use grid gap instead */
+    .skill{margin:0;}
+    /* display 2x2 grid of skills */
+    .skills{
+        display: grid;
+        /* create two rows and two cols of equal sizes */
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        /* gap for grid */
+        gap: 0.25em;
+        /* to separate from next section */
+        padding-bottom: 0.5em;
+    }
+    /* fixes white space at bottom */
+    footer{padding: 3em 0;}
+    /* display samples in 2 by 2 grid */
+    div.samples{
+        display: grid;
+        /* create two rows and two cols of equal sizes */
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);  
+        /* gap for grid */
+        gap: 0.75em;
+    }
+    /* make nav inline */
+    .navBar ul {
+        display: flex;
+        flex-direction: row;
+        /* space around each link */
+        justify-content: space-around;
+        /* with 70% + 25% for logo + 5% space */
+        width: 70%;
+    }
+    /* unhide socials */
+    div.social, footer script{display: block;}
+    /* apply flex to contact me section of footer */
+    div.me{
+        display: flex;
+        flex-direction: row;
+        /* evenly spaces and leaves some space around div and socials */
+        justify-content: space-around;
+    }
+}
+/* desktop 768-992px*/
+@media (min-width: 768px){
+    nav{padding-bottom: 0.75em;}
+    /* hero section styling */
+    .hero{
+        padding:0;
+        text-align: left;
+    }
+    /* her section proportions for desktop */
+    .hero, .tint{aspect-ratio: 16/6;}
+    /* bleed used as wrapper */
+    .bleed{
+        width:95%;
+        margin: 0 auto;
+    }
+    /* moves all text left for sample class, below, text align center is applied to div.samples (h2 not in div) */
+    .samples{
+        text-align: left;
+    }
+    /* styling skill */
+    .skill{
+        text-align: left;
+        padding: 1em;
+    }
+    /* padding zero in skill sections */
+    .skill p{padding:0;}
+    /* help center content without flex */
+    .tint h1{margin-top: 1em;
+}
+    /* footer full width */
+    div.me {justify-content: space-between;}
+    /* hero section text remove padding */
+    div.hero div p:nth-child(2){padding: 0;}
+    /* hero section button, remove margin */
+    div.hero div p:nth-child(3){
+        /* only remove margins on left and right */
+        margin-left: 0;
+        margin-right: 5%;
+        /* align button from right side */
+        text-align: right;
+    }
+    /* move nav links down to align with bottom of svg */
+    div.navBar{
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    /* display samples categories in 4 columns 1 row */
+    div.samples{
+        /* 4 col 1 row */
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        /* aligns all text center */
+        text-align: center;
+        width: 90%;
+    }
+    /* remove space after last element in nav bar */
+    .navBar ul{justify-content: space-between;}
+    /* hide mobile logo */
+    img.mobile{display: none;}
+    /* display desktop logo */
+    img.desktop{
+        display: block;
+        width: 20%;
+    }
+    /* remove link padding  */
+    nav ul li{padding: 0;}
+    /* align footer contact info left on desktop */
+    div.me div p:nth-child(1){text-align: left;}
+}
+/* desktop XL (992px+) */
+@media (min-width: 992px){
+    /* styles body and html for large screens */
+    /* use rgba to set opacity | color used instead of var primary because it gives elements contrast */
+    html{background-color: rgba(104, 193, 186, 0.80);}
+    body{
+        width: 992px;
+        margin: 0 auto;
+    }
+}

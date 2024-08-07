@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/about.css" rel="stylesheet">
+  <title>JHC</title>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        
+        <ul class="skip-links">
+            <li><a role="link" href="#navigation">Skip to nav</a></li>
+            <li><a role="link" href="#heroSec">Skip to hero section</a></li>
+            <li><a role="link" href="#aboutSec">Skip to about content</a></li>
+            <li><a role="link" href="#teamSec">Skip to meet team section</a></li>
+            <li><a role="link" href="#footerSec">Skip to footer</a></li>
+        </ul>
+        <header>
+            <!-- id of naviation for skiplinks | role of naviation for sitewide nav -->
+            <nav role="navigation" id="navigation">
+                <!-- div with class navbar for flex -->
+                <div class="navBar bleed">
+                    <img class="logo mobile" src="/Users/malra/Documents/Final Project/images\IMG-20240805-WA0002.jpg" alt="mobile jhc logo">
+                    <img class="logo desktop" src="images/logoDesktop.svg" alt="desktop jhc logo">
+                    <ul>
+                        <li><a role="link" href="index.html">Home</a></li>
+                        <!-- class active to highlight about in nav | aria-current indates current page (active link) -->
+                        <li><a role="link" aria-current="page" href="about.html" class="active">About</a></li>
+                        <li><a role="link" href="products.html">Products</a></li>
+                        <li><a role="link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- role of main for main content -->
+        <main role="main">
+            <!-- hero banner | id of heroSec for skiplinks | role of banner for sitewide content -->
+            <div role="banner" class="hero" id="heroSec">
+                <!-- blue overlay using class of tint on div -->
+                <div class="tint">
+                    <h1 role="heading" aria-level="1" class="bleed">About Us</h1>
+                    <p class="bleed">Welcome to my website We’re dedicated to delivering engaging and insightful content . Our goal is to provide valuable information and inspire our readers through well-researched articles and practical advice. Founded in [Year], we strive to be a trusted resource for [target audience]. Join us as we explore , and feel free to connect with us through comments and social media. Thanks for visiting!</p>
+                    <!-- text button links to h2 of sample gallery-->
+                    <p><a role="link" href="index.html#sampleStart">View Samples <i class="fa-solid fa-caret-right"></i></a></p>
+                </div>
+            </div>
+            <!-- our mission section with class of mission for styling | id of aboutSec for skiplinks -->
+            <section class="mission bleed" id="aboutSec">
+                <h2 role="heading" aria-level="2">Our Mission</h2>
+                <p>our mission is to make a bloging site so that anyone can get useful information</p>
+            </section>
+            <section class="vision bleed">
+                <h2 role="heading" aria-level="2">Our Vision</h2>
+                <p>our vision is to make a plateform to connect everyone whole around the world so that people can communicate with each other</p>
+            </section>
+            <section class="values bleed">
+                <h2 role="heading" aria-level="2">Our Values</h2>
+                <p>our values is to give accurate information about everything</p>
+            </section>
+            <h2 role="heading" aria-level="2" class="team bleed">Meet the Team</h2>
+           
+            <div itemscope itemtype="https://schema.org/Person" class="jack team" id="teamSec">
+                <h3 itemprop="name" role="heading" aria-level="3"></h3>
+                <h4 itemprop="jobTitle" role="heading" aria-level="4">Graphic Design & Web Dev</h4>
+                <div class="jackBio">
+                    <img src="images/jackPhoto.jpg" alt="photo of jack">
+                    <p>I am an Interactive Media Design student at Algonquin College. My interests are in web development, digital graphics and user experience. In my spare time, I like to design things to laser engrave. I enjoy playing chess.</p>
+                </div>
+            </div>
+            <div itemscope itemtype="https://schema.org/Person" class="john team">
+                <h3 itemprop="name" role="heading" aria-level="3"></h3>
+                <h4 itemprop="jobTitle" role="heading" aria-level="4">Web Dev</h4>
+                <div class="johnBio">
+                    <img src="images/coworker1.jpg" alt="photo of Johnathan Wildew">
+                    <p>I am a Web Development student at Algonquin College. My interests are in web security and design. Working with databases. In my free time I develop small games that are played in browser.</p>
+                </div>
+            </div>
+            <div itemscope itemtype="https://schema.org/Person" class="phalse team">
+                <h3 itemprop="name" role="heading" aria-level="3"></h3>
+                <h4 itemprop="jobTitle" role="heading" aria-level="4">Graphic Design</h4>
+                <div class="phalseBio">
+                    <img src="images/coworker2.jpg" alt="photo of Phalse Naym">
+                    <p>I'm a Graphic Design student at Algonquin College. My interests are art and creative designs. I enjoy photography and designing assets for customizing appearances. In my free time, I like to workout & play football.</p>
+                </div>
+            </div>
+            <div class="backTop"><a role="link" href="#navigation" id="btt">Back to top</a></div>
+        </main>
+        <footer role="contentinfo" id="footerSec">
+            <div class="me bleed">
+                <div itemscope itemtype="https://schema.org/Person">
+                    <p itemprop="name">Jack Habboosh</p>
+                    <p itemprop="telephone">Tel. 613-555-5555</p>
+                </div>
+                <div class="elfsight-app-b25398d7-a10a-4cf9-ab70-ce6b838ca5f5 social"></div>
+            </div>
+            <p>Hero banner images from <a role="link" href="https://unsplash.com">Unsplash</a></p>
+            <p>Copyright &copy; Jack Habboosh Creatives 2022</p>
+        </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/6167e29d85.js" crossorigin="anonymous"></script>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+</body>
+</html>

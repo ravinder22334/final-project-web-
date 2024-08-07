@@ -1,0 +1,75 @@
+h2{padding-bottom: 0.2em;}
+/* change hero background image */
+.hero{
+    /* use image as background */
+    /* work around for hero image not working */
+    background-image: url(https://github.com/habb0016/portfolio/blob/main/images/productsHero.jpg?raw=true);
+}
+/* background for product gallery section */
+.productGallery{background-color: var(--primary-color);}
+/* padding before footer */
+section.laserEngraving{padding-bottom: 1.5em;}
+/* styles products h2*/
+.productGallery h2{
+    text-align: center;
+    padding-top: 0.5em;
+}
+/* style images in gallery */
+.productGallery img{
+    width: 100%;
+    border: 5px solid var(--background-main);
+    box-sizing: border-box;
+    margin: 0.5em 0 1em 0;
+}
+/* styling sections with only text */
+.questions, .webDevelopment, .logoDesign, .graphicDesign, .laserEngraving{
+    text-align: center;
+    padding: 0.5em 2em;
+}
+/* fixes background colour for btt button div */
+div.backTop{
+    background-color: var(--background-main);
+}
+/* Tablet media query (575-768px) */
+@media (min-width: 575px){
+    /* hero position for tablet */
+    .hero {background-position: 0 100%;}
+    .questions{padding-bottom: 1.5em;}
+    /* display product gallery in 2 by 2 grid */
+    div.productGallery{
+        display: grid;
+        /* create two rows and two cols of equal sizes and 1 row for H2 at top */
+        grid-template-columns: repeat(2, 1fr);
+        /* 3 rows automatically sized to fit the content */
+        grid-template-rows: repeat(3, auto);  
+        /* gap for grid */
+        gap: 0.75em;
+    }
+    /* puts h2 above gallery columns */
+    .productGallery h2{grid-column: 1/span 2;}
+}
+/* desktop 768-992 */
+@media (min-width: 768px){
+    /* text sections align text left */
+    .questions, .webDevelopment, .logoDesign, .graphicDesign, .laserEngraving{
+        padding: 0.5em 0 0.75em 0;
+        text-align: left;
+    }
+    /* sets grid for product gallery */
+    div.productGallery{
+        display: grid;
+        /* 4 cols equal width */
+        grid-template-columns: repeat(4, 1fr);
+        /* first row auto space and second 4 fr */
+        grid-template-rows: auto 4fr;
+    }
+    
+     /* style h2 */
+    .productGallery h2{
+        text-align: left;
+        padding-bottom: 0;
+        padding-left: 5px;
+        /* h2 occupies first row entirely */
+        grid-column: 1/span 4;
+    }
+}
